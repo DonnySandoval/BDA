@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         YouTube Enhancer
 // @namespace    http://tampermonkey.net/
-// @version      4.0
-// @description  Enhances YouTube experience
-// @author       JoelMatic
+// @version      1.0
+// @description  Mejorar la experiencia de videos sin interrupciones.
+// @author       Donny
 // @match        https://www.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
-// @updateURL    https://github.com/TheRealJoelmatic/YouTubeEnhancer/raw/main/Youtube-Enhancer.user.js
-// @downloadURL  https://github.com/TheRealJoelmatic/YouTubeEnhancer/raw/main/Youtube-Enhancer.user.js
+// @updateURL    https://github.com/DonnySandoval/BDA/blob/main/BDA.js
+// @downloadURL  https://github.com/DonnySandoval/BDA/blob/main/BDA.js
 // @grant        none
 // ==/UserScript==
 
@@ -88,11 +88,15 @@
         }, 1000);
     }
 
+
+
+    
+
     // Update check
     function checkForUpdates() {
         if (!window.location.href.includes("youtube.com") || !enableUpdateCheck) return;
 
-        const scriptUrl = 'https://raw.githubusercontent.com/TheRealJoelmatic/YouTubeEnhancer/main/Youtube-Enhancer.user.js';
+        const scriptUrl = 'https://raw.githubusercontent.com/DonnySandoval/BDA/main/BDA.js';
 
         fetch(scriptUrl)
             .then(response => response.text())
