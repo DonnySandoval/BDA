@@ -89,6 +89,24 @@
         }, 1000); // Intervalo de verificación cada 1000 ms
     }
 
+    // Función para eliminar los elementos no deseados
+    function removeElements() {
+        // Selecciona y elimina los contenedores específicos
+        let unwantedContainers = document.querySelectorAll('ytd-companion-slot-renderer, ytd-promoted-sparkles-web-renderer, ytd-iframe-companion-renderer, ytd-ad-slot-renderer, .ytp-ad-module');
+        unwantedContainers.forEach(container => container.remove());
+
+        // Oculta la superposición en el video (si existe)
+        let overlay = document.querySelector('.ytp-ad-overlay-slot');
+        if (overlay) overlay.style.display = 'none';
+
+        // Salta la reproducción de ciertos elementos en el video
+        let skipButton = document.querySelector('.ytp-ad-skip-button');
+        if (skipButton) skipButton.click();
+    }
+
+    // Ejecuta la función para eliminar elementos periódicamente
+    setInterval(removeElements, 1000);
+
     // Verificación de actualizaciones
     function checkForUpdates() {
         if (!window.location.href.includes("youtube.com") || !enableUpdateCheck) return; // Verifica si la URL incluye YouTube y si la verificación de actualizaciones está habilitada
