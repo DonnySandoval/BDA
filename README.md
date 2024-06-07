@@ -5,3 +5,5 @@
 
 Para usar este script necesitas tener la extencion de tampermonkey
 puedes descargarla desde el siguiente link http://tampermonkey.net/
+
+El script solo quita los anuncios de los videos de YT.
